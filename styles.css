@@ -1,12 +1,29 @@
+.sevillana-regular {
+    font-family: "Sevillana", cursive;
+    font-weight: 400;
+    font-style: normal;
+}
+h1{
+    font-family: "Sevillana", cursive;
+    font-size: 50px;
+    text-align: center;
+    color: blueviolet;
+}
+body{
+    background-color:darkturquoise;
+}
 .container{
     display: flex;
     gap: 1px;
     width: 1450px;
     flex-wrap: wrap;
+    justify-self: center;
+    margin: 0 auto;
 }
 .box{
     border: 2px solid black;
     height: 10px;
     width: 10px;
     font-size: 8px;
+    background-color: whitesmoke;
 }
