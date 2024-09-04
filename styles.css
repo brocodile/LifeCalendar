@@ -27,3 +27,10 @@ body{
     font-size: 8px;
     background-color: whitesmoke;
 }
+#data{
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-bottom: 20px;
+    color: purple;
+}
