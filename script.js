@@ -9,6 +9,8 @@ for(let i = 1; i<4681; i++){
     container.appendChild(box);
 }
 
+const boxes = document.querySelectorAll(".box");
+
 const date = document.querySelector("#dateTime");
 const submit = document.querySelector("#btn");
 
@@ -24,9 +26,8 @@ submit.addEventListener("click", ()=>{
   let currentDate = `${month}/${day}/${year}`;
 
   let totDays = dateCalc(newB,currentDate);
-  console.log(totDays);
+  colorBox(totDays);
 
-  
 })
 
 function dateCalc(d1,d2){
@@ -35,4 +36,13 @@ function dateCalc(d1,d2){
     let time_difference = date2.getTime() - date1.getTime();  
     let days_difference = time_difference / (1000 * 60 * 60 * 24);
     return days_difference;
+}
+
+function colorBox(days) {
+    let weeks = Math.floor(days / 7);
+    let boxesLength = boxes.length; // Get the total number of boxes
+
+    for (let i = 0; i < weeks && i < boxesLength; i++) {
+        boxes[i].style["background-color"] = "crimson";
+    }
 }
