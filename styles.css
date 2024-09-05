@@ -15,10 +15,10 @@ body{
 .container{
     display: flex;
     gap: 1px;
-    width: 1450px;
-    flex-wrap: wrap;
-    justify-self: center;
+    width: 1439px;
+    flex-wrap:wrap;
     margin: 0 auto;
+    height: 780px;
 }
 .box{
     border: 2px solid black;

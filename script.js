@@ -40,9 +40,15 @@ function dateCalc(d1,d2){
 
 function colorBox(days) {
     let weeks = Math.floor(days / 7);
-    let boxesLength = boxes.length; // Get the total number of boxes
-
-    for (let i = 0; i < weeks && i < boxesLength; i++) {
+    let boxesLength = boxes.length;
+    let i = 0;
+    let mapper = 1;
+    for (let j = 0; j < weeks; j++) {
+        if (i >= boxesLength) {
+            i = mapper;
+            mapper++;
+        }
         boxes[i].style["background-color"] = "crimson";
+        i += 90;
     }
 }
